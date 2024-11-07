@@ -4,13 +4,16 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg" href="./assets/img/favicon.svg" />
+
+		<link rel="stylesheet" href="./assets/css/style.css">
+
 		<title>Meu Perfil</title>
 	</head>
 	<body>
 		<!-- Cabeçalho da Página (header) -->
 		<header>
 			<!-- Div Conteudo do Cabeçalho -->
-			<div id="header_content">
+			<div id="header_content" class="flex">
 				<!-- Titulo do Cabeçalho -->
 				<div id="titulo">
 					<!-- Seu nome -->
@@ -24,10 +27,10 @@
 						<!-- Marcadores não ordenados + links -->
 						<ul id="menu">
 							<li>
-								<a href="index.html"> Home </a>
+								<a href="index.html">Home</a>
 							</li>
 							<li>
-								<a href="contato.html"> Contato </a>
+								<a href="contato.html">Contato</a>
 							</li>
 						</ul>
 					</nav>
@@ -38,21 +41,33 @@
 		<!-- Seção Principal da Página (main) -->
 		<main>
 			<!-- Seção Sobre você -->
-			<section id="about">
+			<section id="about" class="flex_start">
+
 				<!-- Título da Seção -->
 				<h2>Sobre a Generation Brasil</h2>
 
 				<!-- Conteúdo da Seção -->
-				<div id="conteudo">
+				<div id="conteudo" class="flex">
 					<!-- Imagem do criador do conteúdo -->
 					<img
 						src="./assets/img/user_01.svg"
 						alt="Foto do criador desse conteudo"
-						width="200px"
+						class="img_profile"
 					/>
 
 					<!-- Texto sobre o criador do conteúdo -->
 					<article id="sobre_texto">
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Voluptatem odio possimus, dolorem earum atque
+							itaque quas soluta placeat iure omnis porro cum
+							debitis sequi libero! Deleniti vitae quis hic
+							cumque. Lorem ipsum, dolor sit amet consectetur
+							adipisicing elit. Eius inventore ullam, quia
+							deserunt enim cumque hic officia repudiandae ad ab
+							et sapiente qui vitae accusamus adipisci provident
+							sit assumenda laboriosam!
+						</p>
 						<p>
 							Lorem ipsum dolor sit amet consectetur adipisicing
 							elit. Voluptatem odio possimus, dolorem earum atque
@@ -69,13 +84,13 @@
 			</section>
 
 			<!-- Seção contendo um vídeo de sua preferência -->
-			<section id="video">
+			<section id="video" class="flex_start">
 
 				<!-- Título da Seção -->
 				<h2>Meu vídeo favorito:</h2>
 
 				<!-- Vídeo da Seção -->
-				<div id="youtube">
+				<div id="youtube" class="flex">
 					<iframe
 						width="560"
 						height="315"
@@ -92,17 +107,17 @@
 		</main>
 
 		<!-- Rodapé da Página (footer) -->
-		<footer>
+		<footer class="flex">
 			<!-- Seção de Contato - Redes Sociais-->
 			<section id="redes_sociais">
 				<a href="">
-					<img src="assets/img/linkedin.svg" alt="LinkedIn" />
+					<img src="assets/img/linkedin.svg" alt="LinkedIn" class="social_icon"/>
 				</a>
 				<a href="">
-					<img src="assets/img/github.svg" alt="Github" />
+					<img src="assets/img/github.svg" alt="Github" class="social_icon"/>
 				</a>
 				<a href="">
-					<img src="assets/img/instagram.svg" alt="Instagram" />
+					<img src="assets/img/instagram.svg" alt="Instagram" class="social_icon"/>
 				</a>
 			</section>
 
