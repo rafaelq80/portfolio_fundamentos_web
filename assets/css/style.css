@@ -188,6 +188,11 @@ form button:hover {
     background: var(--purple-500); 
 }
 
+form span{
+    color: #ff0000;
+    font-size: 0.75rem;
+}
+
 /* Mapa */
 .article_mapa {
     display: flex;
