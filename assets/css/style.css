@@ -1,167 +1,140 @@
-/* Resetando as configurações padrões */
+/* Reset e Variáveis */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    outline: none;
-    font-weight: 400;
-    font-family: sans-serif;
 }
 
 :root {
     --purple-200: #9a7bd1;
     --purple-500: #6b36c8;
     --purple-800: #441f88;
-
     --black-800: #171717;
-
     --gray-200: #cccccc;
-    --gray-400: #505861;
-
-    --white: #F9F9F9;
-}
-
-html {
-    width: 100%;
-    height: 100vh;
+    --white: #f9f9f9;
 }
 
 body {
     background: var(--gray-200);
     color: var(--black-800);
+    font-family: sans-serif;
 }
 
-/* Definindo as configurações de títulos e paragrafo */
-h1{
-    color: var(--white);
-    font-size: 2rem;
+/* Títulos e textos */
+h1, h2, h3 {
     font-weight: 700;
 }
 
-h2{
-    padding: 1rem;
-    color: var(--black-800);
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-align: left;
+h1 { 
+    color: var(--white); 
+    font-size: 2rem; 
 }
 
-h3{
-    padding: 1rem;
-    color: var(--white);
-    font-size: 1.25rem;
-    font-weight: 700;
-    text-align: center;
+h2 { 
+    color: var(--black-800); 
+    font-size: 1.5rem; 
+    padding: 1rem 0; 
+    font-weight: 600; 
 }
 
-p{
-    font-size: 1rem;
-    line-height: 1.5rem;
-    text-align: justify;
-    padding: 0.5rem 0;
+h3 { 
+    color: var(--white); 
+    font-size: 1rem; 
+    text-align: center; 
 }
 
-/* Definindo as configurações do Flexbox */
+p { 
+    font-size: 1rem; 
+    line-height: 1.5rem; 
+    text-align: justify; 
+}
 
-.flex {
+/* Seções Gerais */
+section {
+    width: 90%;
+    margin: 2rem auto;
+}
+
+/* Header e Menu */
+header {
+    background: var(--purple-800);
+    padding: 1rem 2rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.flex_start {
-    display: flex;
-    justify-content: flex-start;
-}
- 
- /* Estilização da Seção Header */
- #header_content {
-    height: 80px;
-    position: sticky; 
-    top: 0; 
-    width: 100%; 
     justify-content: space-between;
-    padding: 24px;
-    background-color: var(--purple-800);
-    border-bottom: 1px solid var(--purple-500);
+    align-items: center;
+    position: sticky;
+    top: 0;
 }
- 
- #menu li {
-    display: inline;
-    padding: 1rem;
- }
- 
- #menu li a {
-    text-decoration: none;
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
     color: var(--white);
-    font-size: 20px;
- }
- 
- #menu li a:hover {
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
     color: var(--purple-200);
     text-decoration: underline;
- }
- 
- /* Estilização da Seção About */
+}
 
- #about{
-    flex-direction: column;
-    margin: 2rem auto;
-    width: 90%;
- }
-
-#conteudo{
-    flex-direction: row;
+/* About */
+#about article {
+    display: flex;
+    align-items: center;
     gap: 2rem;
-
 }
 
-.img_profile{
-    width: 200px;
+#about img { 
+    width: 200px; 
+    flex-shrink: 0; 
 }
- 
-/* Estilização da Seção Video */
 
-#video{
-    flex-direction: column;
-    margin: 2rem auto;
-    width: 90%;
- }
+#about p { 
+    flex: 1; 
+}
 
-/* Estilização da Seção Footer */
+/* Vídeo */
+#video figure {
+    display: flex;
+    justify-content: center;
+}
 
+/* Footer */
 footer{
     flex-direction: column;
-    margin: 0;
-    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
     color: var(--white);
     background-color: var(--purple-500);
     font-weight: bold;
     text-align: center;
 }
 
-#redes_sociais {
+footer section {
+    width: 100%;
     display: flex;
-    justify-content: space-evenly; 
-    margin: 1rem 0 0 0;
-    width: 320px;
+    justify-content: center; 
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
 }
 
-.social_icon {
-    width: 4rem;
-    height: 4rem;
-    filter: brightness(0) 
-            saturate(100%) 
-            invert(100%) 
-            sepia(0%) 
-            saturate(7457%) 
-            hue-rotate(23deg) 
-            brightness(95%) 
-            contrast(87%);
+footer img {
+    width: 2rem;
+    height: 2rem;
+    display: block;
+    filter: invert(100%);
+    transition: filter 0.3s;
 }
 
-.social_icon:hover {  
+footer img:hover {
     filter: brightness(0) 
             saturate(100%) 
             invert(65%) 
@@ -172,74 +145,69 @@ footer{
             contrast(88%);
 }
 
- /*Estilização da Página de Contato*/
- 
- #contact{
-    flex-direction: row;
+/* Contato */
+.main_contato {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
- }
+    width: 90%;
+    margin: 2rem auto;
+}
 
 form {
     display: flex;
     flex-direction: column;
-    width: 480px;
-    margin: 2rem 0;
+    gap: 0.5rem;
     padding: 1.5rem;
-    border: none;
+    border-radius: 0.75rem;
 }
 
-form label {
-    font-size: 1rem;
-    text-align: left;
-    font-weight: 500;
-}
-
-form input,
-textarea {
-    margin: 0.5rem 0 1rem;
+form input, textarea {
     padding: 0.5rem;
-    border-radius: 1.25rem;
+    border-radius: 0.75rem;
     border: none;
-    width: 100%;
     font-size: 1rem;
 }
 
-textarea {
-    resize: none;
-    height: 5rem;
-}
-
-form span{
-    margin: 0 0 0.5rem 0.75rem;
-    font-size: 0.75rem;
-    line-height: 1rem;
-    color: red;
+textarea { 
+    resize: none; 
+    height: 5rem; 
 }
 
 form button {
-    text-align: center;
-    padding: 0.75rem 2rem;
     background: var(--purple-800);
-    border: 1px solid var(--purple-500);
     color: var(--white);
+    padding: 0.75rem;
+    border: 1px solid var(--purple-500);
     border-radius: 0.75rem;
     font-weight: 700;
-    font-size: 1rem;
+    cursor: pointer;
 }
 
-form button:hover {
-    background: var(--purple-500);
+form button:hover { 
+    background: var(--purple-500); 
 }
 
-/* Estilização do Mapa */
-#mapa{
-    width: 480px;
+/* Mapa */
+.article_mapa {
+    display: flex;
     flex-direction: column;
-    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
 }
 
-#endereco > p{
-    font-size: 1rem;
-    text-align: justify;
-    font-weight: 600;
+.article_mapa address {
+    width: 75%;
+}
+
+.article_mapa address p { 
+    font-weight: 600; 
+}
+
+.article_mapa iframe {
+    align-self: center; 
 }
