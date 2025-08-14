@@ -1,157 +1,111 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<meta charset="UTF-8">
-		
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Projeto Portfólio">
-		<meta name="author" content="Generation Brasil">
-		<meta name="keywords" content="HTML, CSS, JavaScript">
-		
-		<link rel="icon" type="image/svg" href="./assets/img/favicon.svg" />
 
-		<!-- Link para a Folha de Estilo da Página - CSS -->
-		<link rel="stylesheet" href="./assets/css/style.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projeto Portfólio">
+    <meta name="author" content="Generation Brasil">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg" />
 
-		<title>Meu Perfil</title>
-	</head>
-	<body>
+    <!-- Link para a Folha de Estilo da Página - CSS -->
+	<link rel="stylesheet" href="./assets/css/styles.css" />
 
-		<!-- Cabeçalho da Página (header) -->
-		<header>
+    <title>Meu Perfil</title>
+</head>
 
-			<!-- Div Conteudo do Cabeçalho -->
-			<div id="header_content" class="flex">
+    <!-- Cabeçalho da Página (header) -->
+    <header>
 
-				<!-- Titulo do Cabeçalho -->
-				<div id="titulo">
+        <!-- Título do cabeçalho -->
+        <h1>Generation Brasil</h1>
 
-					<!-- Seu nome -->
-					<h1>Generation Brasil</h1>
+        <!-- Menu de Navegação -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
 
-				</div>
+    </header>
 
-				<!-- Conteudo do Menu da Página (header) -->
-				<div id="menu">
+    <!-- Seção Principal da Página (main) -->
+    <main>
 
-					<!-- Menu da Página -->
-					<nav>
+        <!-- Seção Sobre -->
+        <section id="about">
 
-						<!-- Marcadores não ordenados + links -->
-						<ul id="menu">
-							<li>
-								<a href="index.html">Home</a>
-							</li>
-							<li>
-								<a href="contato.html">Contato</a>
-							</li>
-						</ul>
+            <!-- Título da Seção -->
+            <h2>Sobre a Generation Brasil</h2>
 
-					</nav>
+            <article>
 
-				</div>
+                <!-- Foto do Perfil -->
+                <img src="./assets/img/user_01.svg" alt="Foto do criador desse conteúdo"/>
 
-			</div>
+                <!-- Texto do Perfil -->
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem odio possimus, dolorem
+                    earum atque itaque quas soluta placeat iure omnis porro cum debitis sequi libero! Deleniti
+                    vitae quis hic cumque. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius
+                    inventore ullam, quia deserunt enim cumque hic officia repudiandae ad ab et sapiente qui
+                    vitae accusamus adipisci provident sit assumenda laboriosam!
+                </p>
+                
+            </article>
 
-		</header>
+        </section>
 
-		<!-- Seção Principal da Página (main) -->
-		<main>
+        <!-- Seção vídeo -->
+        <section id="video">
 
-			<!-- Seção Sobre você -->
-			<section id="about" class="flex_start">
+            <!-- Título da Seção -->
+			<h2>Meu vídeo favorito:</h2>
 
-				<!-- Título da Seção -->
-				<h2>Sobre a Generation Brasil</h2>
+            <!-- Vídeo da Seção -->
+            <figure>
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/Z3_mtwMMuGI?si=F1QiiDYSfsPG3nF0"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                ></iframe>
+            </figure>
 
-				<!-- Conteúdo da Seção -->
-				<div id="conteudo" class="flex">
+        </section>
 
-					<!-- Imagem do criador do conteúdo -->
-					<img
-						src="./assets/img/user_01.svg"
-						alt="Foto do criador desse conteudo"
-						class="img_profile"
-					/>
+    </main>
 
-					<!-- Texto sobre o criador do conteúdo -->
-					<article id="sobre_texto">
+    <!-- Rodapé da Página (footer) -->
+    <footer>
 
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing
-							elit. Voluptatem odio possimus, dolorem earum atque
-							itaque quas soluta placeat iure omnis porro cum
-							debitis sequi libero! Deleniti vitae quis hic
-							cumque. Lorem ipsum, dolor sit amet consectetur
-							adipisicing elit. Eius inventore ullam, quia
-							deserunt enim cumque hic officia repudiandae ad ab
-							et sapiente qui vitae accusamus adipisci provident
-							sit assumenda laboriosam!
-						</p>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing
-							elit. Voluptatem odio possimus, dolorem earum atque
-							itaque quas soluta placeat iure omnis porro cum
-							debitis sequi libero! Deleniti vitae quis hic
-							cumque. Lorem ipsum, dolor sit amet consectetur
-							adipisicing elit. Eius inventore ullam, quia
-							deserunt enim cumque hic officia repudiandae ad ab
-							et sapiente qui vitae accusamus adipisci provident
-							sit assumenda laboriosam!
-						</p>
+        <!-- Seção de Contato - Redes Sociais-->
+        <section>
 
-					</article>
+            <a href="">
+                <img src="assets/img/linkedin.svg" alt="LinkedIn" />
+            </a>
 
-				</div>
+            <a href="">
+                <img src="assets/img/github.svg" alt="Github" />
+            </a>
 
-			</section>
+            <a href="">
+                <img src="assets/img/instagram.svg" alt="Instagram" />
+            </a>
 
-			<!-- Seção contendo um vídeo de sua preferência -->
-			<section id="video" class="flex_start">
+        </section>
 
-				<!-- Título da Seção -->
-				<h2>Meu vídeo favorito:</h2>
+		<h3>
+			Feito com 🧡 por Generation Brasil - 2025
+		</h3>
 
-				<!-- Vídeo da Seção -->
-				<div id="youtube" class="flex">
+    </footer>
 
-					<iframe
-						width="560"
-						height="315"
-						src="https://www.youtube.com/embed/Z3_mtwMMuGI?si=F1QiiDYSfsPG3nF0"
-						frameborder="0"
-						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen
-					>
-					</iframe>
+</body>
 
-				</div>
-
-			</section>
-			
-		</main>
-
-		<!-- Rodapé da Página (footer) -->
-		<footer class="flex">
-
-			<!-- Seção de Contato - Redes Sociais-->
-			<section id="redes_sociais">
-
-				<a href="">
-					<img src="assets/img/linkedin.svg" alt="LinkedIn" class="social_icon"/>
-				</a>
-				<a href="">
-					<img src="assets/img/github.svg" alt="Github" class="social_icon"/>
-				</a>
-				<a href="">
-					<img src="assets/img/instagram.svg" alt="Instagram" class="social_icon"/>
-				</a>
-
-			</section>
-
-			<h3>Feito com 🧡 por Generation Brasil - 2024</h3>
-
-		</footer>
-
-	</body>
 </html>
