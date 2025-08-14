@@ -1,138 +1,116 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<meta charset="UTF-8">
-		
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Projeto Portfólio">
-		<meta name="author" content="Generation Brasil">
-		<meta name="keywords" content="HTML, CSS, JavaScript">
-		
-		<link rel="icon" type="image/svg" href="./assets/img/favicon.svg" />
 
-		<!-- Link para a Folha de Estilo da Página - CSS -->
-		<link rel="stylesheet" href="./assets/css/style.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projeto Portfólio">
+    <meta name="author" content="Generation Brasil">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg" />
 
-		<title>Meu Perfil</title>
-	</head>
-	<body>
-		<!-- Cabeçalho da Página (header) -->
-		<header>
-			<!-- Div Conteudo do Cabeçalho -->
-			<div id="header_content" class="flex">
-				<!-- Titulo do Cabeçalho -->
-				<div id="titulo">
-					<!-- Seu nome -->
-					<h1>Generation Brasil</h1>
-				</div>
+    <!-- Link para a Folha de Estilo da Página - CSS -->
+	<link rel="stylesheet" href="./assets/css/styles.css" />
 
-				<!-- Conteudo do Menu da Página (header) -->
-				<div id="menu">
-					<!-- Menu da Página -->
-					<nav>
-						<!-- Marcadores não ordenados + links -->
-						<ul id="menu">
-							<li>
-								<a href="index.html">Home</a>
-							</li>
-							<li>
-								<a href="contato.html">Contato</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</header>
+    <title>Contato</title>
+</head>
 
-		<!-- Seção Principal da Página (main) -->
-		<main>
-			<div id="contact" class="flex">
-				<!-- Seção Formulário de Contato-->
-				<form action="#" method="submit" id="formulario">
-					<label for="name">Nome: </label>
-					<input
-						id="name"
-						type="text"
-						name="name"
-						placeholder="Digite seu nome"
-					/>
-					<span id="txtNome"></span>
+<body>
 
-					<label for="email">Email: </label>
-					<input
-						id="email"
-						type="text"
-						name="email"
-						placeholder="Digite seu email"
-					/>
-					<span id="txtEmail"></span>
+    <!-- Cabeçalho da Página (header) -->
+    <header>
 
-					<label for="subject">Assunto: </label>
-					<input
-						id="subject"
-						type="text"
-						name="subject"
-						placeholder="Digite o título da mensagem"
-					/>
-					<span id="txtSubject"></span>
+        <!-- Título do cabeçalho -->
+        <h1>Generation Brasil</h1>
 
-					<label for="message">Mensagem: </label>
-					<textarea
-						id="message"
-						name="message"
-						placeholder="Digite sua mensagem"
-					></textarea>
+        <!-- Menu de Navegação -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
 
-					<button type="submit">Enviar</button>
-				</form>
+    </header>
 
-				<!-- Seção do Google Maps -->
-				<section id="mapa" class="flex_start">
-					
-					<div id="endereco">
-						<p>Av. Paulista, 100</p>
-						<p>São Paulo - SP</p>
-					</div>
+    <!-- Seção Principal da Página (main) -->
+    <main class="main_contato">
 
-					<iframe
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.106696296001!2d-46.65390548535577!3d-23.564611167596592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c7f481fd9f%3A0x9982bfde4df54830!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1spt-BR!2sbr!4v1594056507065!5m2!1spt-BR!2sbr"
-						width="400"
-						height="250"
-						frameborder="0"
-						style="border: 0"
-						allowfullscreen=""
-						aria-hidden="false"
-						tabindex="0"
-						id="mapa"
-						onmousemove="mapaZoom()" 
-						onmouseout="mapaNormal()"
-					>
-					</iframe>
-				</section>
-			</div>
-		</main>
+        <!-- Seção do Formulário -->
+        <form action="#" method="submit" id="formulario">
 
-		<!-- Rodapé da Página (footer) -->
-		<footer class="flex">
-			<!-- Seção de Contato - Redes Sociais-->
-			<section id="redes_sociais">
-				<a href="">
-					<img src="assets/img/linkedin.svg" alt="LinkedIn" class="social_icon"/>
-				</a>
-				<a href="">
-					<img src="assets/img/github.svg" alt="Github" class="social_icon"/>
-				</a>
-				<a href="">
-					<img src="assets/img/instagram.svg" alt="Instagram" class="social_icon"/>
-				</a>
-			</section>
+            <label for="nome">Nome: </label>
+            <input id="name" type="text" name="name" placeholder="Digite seu nome" />
+            <span id="errNome"></span>
 
-			<h3>Feito com 🧡 por Generation Brasil - 2024</h3>
-			
-		</footer>
+            <label for="email">Email: </label>
+            <input id="email" type="text" name="email" placeholder="Digite seu email" />
+            <span id="errEmail"></span>
 
-		<!-- Script JavaScript-->
-		<script src="./assets/js/script.js"></script>
+            <label for="subject">Assunto: </label>
+            <input id="subject" type="text" name="subject" placeholder="Digite o assunto da mensagem" />
+            <span id="errSubject"></span>
 
-	</body>
+            <label for="message">Mensagem: </label>
+            <textarea id="message" name="message" placeholder="Digite sua mensagem"></textarea>
+
+            <button type="submit">Enviar</button>
+
+        </form>
+
+        <!-- Seção do Google Maps -->
+        <article class="article_mapa">
+
+            <address>
+                <p>Av. Paulista, 100</p>
+                <p>São Paulo - SP</p>
+            </address>
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.106696296001!2d-46.65390548535577!3d-23.564611167596592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c7f481fd9f%3A0x9982bfde4df54830!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1spt-BR!2sbr!4v1594056507065!5m2!1spt-BR!2sbr"
+                width="400"
+                height="250"
+                frameborder="0"
+                style="border: 0"
+                allowfullscreen
+                aria-hidden="false"
+                tabindex="0"
+            ></iframe>
+
+        </article>
+
+
+    </main>
+
+    <!-- Rodapé da Página (footer) -->
+    <footer>
+
+        <!-- Seção de Contato - Redes Sociais-->
+        <section>
+
+            <a href="">
+                <img src="assets/img/linkedin.svg" alt="LinkedIn" />
+            </a>
+
+            <a href="">
+                <img src="assets/img/github.svg" alt="Github" />
+            </a>
+
+            <a href="">
+                <img src="assets/img/instagram.svg" alt="Instagram" />
+            </a>
+
+        </section>
+
+        <h3>
+            Feito com 🧡 por Generation Brasil - 2025
+        </h3>
+
+    </footer>
+
+    <!-- Script JavaScript-->
+    <script src="assets/js/script.js"></script>
+
+</body>
+
 </html>
