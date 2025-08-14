@@ -5,36 +5,36 @@ formulario.addEventListener('submit', function(event) {
     event.preventDefault();
   
     const campoNome = document.querySelector('#name');
-    const txtNome = document.querySelector('#txtNome');
+    const errNome = document.querySelector('#errNome');
   
     if (campoNome.value.length < 3) {
-      txtNome.innerHTML = 'O Nome deve ter no minimo 3 caracteres.';
+      errNome.innerHTML = 'O Nome deve ter no minimo 3 caracteres.';
       campoNome.focus();
       return;
     }else{
-      txtNome.innerHTML = '';
+      errNome.innerHTML = '';
     }
   
     const campoEmail = document.querySelector('#email');
-    const txtEmail = document.querySelector('#txtEmail');
+    const errEmail = document.querySelector('#errEmail');
   
     if (!campoEmail.value.match(emailRegex)) {
-      txtEmail.innerHTML = 'Digite um E-mail válido.';
+      errEmail.innerHTML = 'Digite um E-mail válido.';
       campoEmail.focus();
       return;
     }else{
-      txtEmail.innerHTML = '';
+      errEmail.innerHTML = '';
     }
   
     const campoSubject = document.querySelector('#subject');
-    const txtSubject = document.querySelector('#txtSubject');
+    const errSubject = document.querySelector('#errSubject');
   
     if (campoSubject.value.length < 5) {
-      txtSubject.innerHTML = 'O Assunto deve ter no minimo 5 caracteres.';
+      errSubject.innerHTML = 'O Assunto deve ter no minimo 5 caracteres.';
       campoSubject.focus();
       return;
     }else{
-      txtSubject.innerHTML = '';
+      errSubject.innerHTML = '';
     }
 
     const campoMessage = document.querySelector('#message');
